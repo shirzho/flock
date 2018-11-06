@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Notice that socket.io adds a path to its client-side js that is not in /public -->
+	<script src="/socket.io/socket.io.js"></script>
+	
+	<body>
+        <p><span id="secs">No</span> seconds have passed. (not the most accurate sorry I tried)</p>
+		<p> There are currently <span id="numPlayers">no</span> users.</p>
+		<p>  <span id="welcome"></span></p>
+        <form id="user msg">
+            <p>type message here: (hit submit button, pressing enter won't work)</p>
+            <input id="user_msg">
+        </form>
+        <button id="send">submit</button>	
+
+        <p>The most recent message typed by any user appears down here:</p>
+        <p><span id="response_area"></span></p>	
+	</body>
+</html>
