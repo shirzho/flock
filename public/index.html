@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- <link rel="shortcut icon" href="images/heart.ico" type="image/x-icon"> -->
 	<!-- Notice that socket.io adds a path to its client-side js that is not in /public -->
-	<script src="/socket.io/socket.io.js"></script>
-	
+	<!-- <script src="/socket.io/socket.io.js"></script> -->
+</head>
 	<body>
-        <p><span id="secs">No</span> seconds have passed. (not the most accurate sorry I tried)</p>
-		<p> There are currently <span id="numPlayers">no</span> users.</p>
-		<p>  <span id="welcome"></span></p>
-        <form id="user msg">
-            <p>type message here: (hit submit button, pressing enter won't work)</p>
-            <input id="user_msg">
-        </form>
-        <button id="send">submit</button>	
+				<h1> Flock </h1>
+        <p>This is our current deployment for Flock our crime heat map application.</p>
+				<p> We will be using Zeit.co's Now to deploy all versions of our application as we progress</p>
+				<p> Flock lives in a Node JS application running with Express - a web application framework </p>
+				<br>
+				<p> add <b>"/_src"</b> to the end of the current site URL to see our file directory and everything we are currently running on and built upon</p>
 
-        <p>The most recent message typed by any user appears down here:</p>
-        <p><span id="response_area"></span></p>	
+				<div class = "footer">
+					<p class = "text-muted font-weight-light">  made with <img src = "images/heart.ico" style="width:16px;height:16px;"> by Iram, Justin, and Shirley &copy; 2018.</font></p>
+				</div>
 	</body>
 </html>
