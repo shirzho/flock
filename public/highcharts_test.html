@@ -1,23 +1,25 @@
 <html>
    <head>
       <title>Highcharts Tutorial</title>
+      <link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+      <script src = "https://code.highcharts.com/highcharts.js"></script>
    </head>
-   
+
    <body>
+     <a href= "index.html"> < go back </a>
       <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">
-         $(document).ready(function() {  
+         $(document).ready(function() {
             var chart = {
                type: 'bar'
             };
             var title = {
-               text: 'Historic World Population by Region'   
+               text: 'Historic World Population by Region'
             };
             var subtitle = {
-               text: 'Source: Wikipedia.org'  
+               text: 'Source: Wikipedia.org'
             };
             var xAxis = {
                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
@@ -56,7 +58,7 @@
                y: 100,
                floating: true,
                borderWidth: 1,
-               
+
                backgroundColor: (
                   (Highcharts.theme && Highcharts.theme.legendBackgroundColor)
                   || '#FFFFFF'),
@@ -69,24 +71,24 @@
                {
                   name: 'Year 1800',
                   data: [107, 31, 635, 203, 2]
-               }, 
+               },
                {
                   name: 'Year 1900',
                   data: [133, 156, 947, 408, 6]
-               }, 
+               },
                {
                   name: 'Year 2008',
-                  data: [973, 914, 4054, 732, 34]      
+                  data: [973, 914, 4054, 732, 34]
                }
             ];
-      
-            var json = {};   
-            json.chart = chart; 
-            json.title = title;   
-            json.subtitle = subtitle; 
+
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
             json.tooltip = tooltip;
             json.xAxis = xAxis;
-            json.yAxis = yAxis;  
+            json.yAxis = yAxis;
             json.series = series;
             json.plotOptions = plotOptions;
             json.legend = legend;
@@ -95,5 +97,5 @@
          });
       </script>
    </body>
-   
+
 </html>
