@@ -1,116 +1,138 @@
 <html>
    <head>
       <title>Highcharts Tutorial</title>
-      <link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>
-
-      <link rel = "stylesheet" media = "all" type = "text/css" href = "css/bootstrap.css">
-    	<script type = "text/javascript" src = "js/bootstrap.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+	  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+	  <script src="https://code.highcharts.com/modules/export-data.js"></script>
    </head>
-
+   
    <body>
-     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-
-   			<a class="navbar-brand" href="index.html">Flock</a>
-   			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-   			<div class="collapse navbar-collapse" id="navbarNav">
-   				  <a class="nav-link" href="highcharts_test.html">historical data</a>
-   				  <a class="nav-link" href="map_test.html">area info map</a>
-   				  <a class="nav-link" href="leafdemo1.html">directions</a>
-   			</div>
- 		</nav>
-     
       <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">
-         $(document).ready(function() {
-            var chart = {
-               type: 'bar'
-            };
-            var title = {
-               text: 'Historic World Population by Region'
-            };
-            var subtitle = {
-               text: 'Source: Wikipedia.org'
-            };
-            var xAxis = {
-               categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-               title: {
-                  text: null
-               }
-            };
-            var yAxis = {
-               min: 0,
-               title: {
-                  text: 'Population (millions)',
-                  align: 'high'
-               },
-               labels: {
-                  overflow: 'justify'
-               }
-            };
-            var tooltip = {
-               valueSuffix: ' millions'
-            };
-            var plotOptions = {
-               bar: {
-                  dataLabels: {
-                     enabled: true
-                  }
-               },
-               series: {
-                  stacking: 'normal'
-               }
-            };
-            var legend = {
-               layout: 'vertical',
-               align: 'right',
-               verticalAlign: 'top',
-               x: -40,
-               y: 100,
-               floating: true,
-               borderWidth: 1,
-
-               backgroundColor: (
-                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor)
-                  || '#FFFFFF'),
-               shadow: true
-            };
-            var credits = {
-               enabled: false
-            };
-            var series = [
-               {
-                  name: 'Year 1800',
-                  data: [107, 31, 635, 203, 2]
-               },
-               {
-                  name: 'Year 1900',
-                  data: [133, 156, 947, 408, 6]
-               },
-               {
-                  name: 'Year 2008',
-                  data: [973, 914, 4054, 732, 34]
-               }
-            ];
-
-            var json = {};
-            json.chart = chart;
-            json.title = title;
-            json.subtitle = subtitle;
-            json.tooltip = tooltip;
-            json.xAxis = xAxis;
-            json.yAxis = yAxis;
-            json.series = series;
-            json.plotOptions = plotOptions;
-            json.legend = legend;
-            json.credits = credits;
-            $('#container').highcharts(json);
-         });
+         Highcharts.chart('container', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Annual Crime Rate'
+    },
+    xAxis: {
+        categories: ['2012','2013','2014','2015','2016','2017','2018']
+    },
+    yAxis: {
+        title: {
+            text: 'Number of Crimes'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: 'Violent Crime',
+        data: [2134, 2245, 2098, 2567, 2521, 2347, 2415]
+    }, {
+        name: 'Property Crime',
+        data: [12845, 10784, 9924, 9501, 10316, 11379, 10179]
+    }]
+});
       </script>
-   </body>
+      <div id = "container2" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         Highcharts.chart('container2', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Crime Rate by Time of Day'
+    },
+    xAxis: {
+        categories: ['2AM-6AM','6AM-10AM','10AM-2PM','2PM-6PM','6PM-10PM','10PM-2AM']
+    },
+    yAxis: {
+        title: {
+            text: 'Percentage of Crimes'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: 'Violent Crime',
+        data: [23,12,6,10,17,32]
+    }, {
+        name: 'Property Crime',
+        data: [28,16,7,8,14,27]
+    }]
+});
+      </script>
+      <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <script>
+      Highcharts.chart('container3', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Monthly Crime by Type'
+    },
+    xAxis: {
+        categories: [
+            'Jan-Mar',
+            'Apr-Jun',
+            'Jul-Sep',
+            'Oct-Dec'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Crimes'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Murder',
+        data: [12.4,11.7,11.4,12.8]
 
+    }, {
+        name: 'Rape',
+        data: [27.8,25.7,26.7,27.6]
+
+    }, {
+        name: 'Assault',
+        data: [336.8,302.1,298.6,312.7]
+
+    }, {
+        name: 'Robbery',
+        data: [1785.6,1645.4,1686.6,1732.0]
+
+    }]
+});
+</script>
+   </body>
+   
 </html>
