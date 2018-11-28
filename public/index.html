@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<!-- <link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" /> -->
-
-
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<link rel = "stylesheet" media = "all" type = "text/css" href = "css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<script type = "text/javascript" src = "js/bootstrap.js"></script>
-	<script type = "text/javascript" src = "javascripts/scripts.js"></script>
+	<!-- <script type = "text/javascript" src = "javascripts/scripts.js"></script> -->
+
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
 	<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
 	<!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -22,21 +20,17 @@
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-light">
 
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
-  	</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<nav class="nav">
-			  <a class="nav-link active" href="#">Active</a>
-			  <a class="nav-link" href="#">Link</a>
-			  <a class="nav-link" href="#">Link</a>
-			  <a class="nav-link disabled" href="#">Disabled</a>
-			</nav>
-		</div>
-	</nav>
+			<a class="navbar-brand" href="index.html">Flock</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				  <a class="nav-link" href="highcharts_test.html">historical data</a>
+				  <a class="nav-link" href="map_test.html">area info map</a>
+				  <a class="nav-link" href="leafdemo1.html">directions</a>
+			</div>
+		</nav>
 	<div class = "container">
-				<h1> Flock </h1>
         <p>This is our current deployment for Flock our crime heat map application.</p>
 		<p> We will be using Zeit.co's Now to deploy all versions of our application as we progress</p>
 		<p> Flock lives in a Node JS application running with Express - a web application framework </p>
