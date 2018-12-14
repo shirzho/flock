@@ -1,13 +1,29 @@
 <html>
    <head>
-      <title>Highcharts Tutorial</title>
+      <title>Historical Data </title>
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+      <script src = "https://code.highcharts.com/highcharts.js"></script>
 	  <script src="https://code.highcharts.com/modules/exporting.js"></script>
 	  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <link rel = "stylesheet" media = "all" type = "text/css" href = "css/bootstrap.css">
+    <link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
+  	<script type = "text/javascript" src = "js/bootstrap.js"></script>
    </head>
-   
+
    <body>
+     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+
+       <a class="navbar-brand" href="index.html">Flock</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+           <a class="nav-link" href="highcharts_test.html">historical data</a>
+           <a class="nav-link" href="map_test.html">area info map</a>
+           <a class="nav-link" href="leafdemo1.html">directions</a>
+       </div>
+     </nav>
+
       <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">
          Highcharts.chart('container', {
@@ -134,5 +150,5 @@
 });
 </script>
    </body>
-   
+
 </html>

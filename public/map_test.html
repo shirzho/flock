@@ -10,9 +10,24 @@
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
     integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
     crossorigin=""></script>
+    <link rel = "stylesheet" media = "all" type = "text/css" href = "css/bootstrap.css">
+    <link rel = "stylesheet" type = "text/css" href = "stylesheets/style.css" />
+  	<script type = "text/javascript" src = "js/bootstrap.js"></script>
 
 </head>
 <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+
+      <a class="navbar-brand" href="index.html">Flock</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="nav-link" href="highcharts_test.html">historical data</a>
+          <a class="nav-link" href="map_test.html">area info map</a>
+          <a class="nav-link" href="leafdemo1.html">directions</a>
+      </div>
+    </nav>
     <div id="map" style="width: 600px; height: 400px"></div>
 
     <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
